@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "complex.js": "^2.0.15"
+    "complex.js": "^2.0.15",
+    "mathjs": "^9.5.1"
   }
 }

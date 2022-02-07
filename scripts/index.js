@@ -1,38 +1,36 @@
-// const {Complex} = require("complex.js");
 
-const id_canvas_souce = "source_canvas";
+const ID_CANVAS_SOURCE = "source_canvas";
 const id_canvas_operator = "operator_canvas";
 const id_canvas_result = "result_canvas";
 
-
-const s = ( sketch ) => {
-  let plot2d ; // handles all the mathematical aspect of the the plot
+let MOUSE = createNewVector(0, 0)
+document.onmousemove = function(e) {
+  MOUSE.x = e.clientX
+  MOUSE.y = e.clientY
+}
+const canvasHandler = (sketch) => {
+  //this object handle drawing in the canvas
+  //TODO:handle resize, when signal si recived
 
   sketch.setup = () => {
-    sketch.createCanvas(200, 200);
+    sketch.createCanvas(500, 500);
+
   };
 
   sketch.draw = () => {
-    sketch.clear()
-  };
+    sketch.clear();
+    let drawingData = sketch.handler.getFrameContent();
+    drawingData
+    // for (let l of drawingData.lines) {
+    //   sketch.line(l[0], l[1], l[2], l[3]);
+    // }
 
-  sketch.drawAxes(p0x,p1x,p0y,p1y){
-    //draw axis lines
-    //draw arrows
-  }
-  sketch.drawLine(l){
-    for (let i =0; i<l.length-1;i++)
-    {
-      const p0 = l[i];
-      const p1 = l[i+1];
-      sketch.line(p0.re,p0.im,p1.re,p1.im);
-    }
-  }
+  };
 
 
 
 
 };
 
-let myp5 = new p5(s,id_canvas_souce);
 
+let sourceGraph = new graph2d(ID_CANVAS_SOURCE, canvasHandler);

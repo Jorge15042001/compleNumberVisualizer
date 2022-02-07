@@ -25,3 +25,11 @@
 
 
 
+## Design
+
+* Drawable2dGraphics, handler
+  * Canvas, handles interaction with the user
+  * Plane, mathematical backend,
+    * axes
+    * lines,dots
+

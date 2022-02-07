@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Complex Number Visualizer</title>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
-    <script src="node_modules/complex.js/complex.js" ></script>
-    <script src="scripts/index.js" ></script>
-  </head>
-  <body>
-    <div class="left-side">
-      <div id="source_canvas">
-        
-      </div>
-      <div id="operator_canvas">
-        
-      </div>
+
+<head>
+  <title>Complex Number Visualizer</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+  <script src="node_modules/complex.js/complex.js"></script>
+  <script src="scripts/vector.js"></script>
+  <script src="scripts/dragableZone.js"></script>
+  <script src="scripts/zoomableZone.js"></script>
+  <script src="scripts/bounds.js"></script>
+  <script src="scripts/ticks.js"></script>
+
+  <script defer src="scripts/2dgraph.js"></script>
+  <script defer src="scripts/axe.js"></script>
+  <script defer src="scripts/plot.js"></script>
+  <script defer src="scripts/index.js"></script>
+</head>
+
+<body>
+  <div class="left-side">
+    <div id="source_canvas">
+
     </div>
-    <div class="rigth-side" id="result_canvas">
-      
+    <div id="operator_canvas">
+
     </div>
-  </body>
+  </div>
+  <div class="rigth-side" id="result_canvas">
+
+  </div>
+</body>
+
 </html>
